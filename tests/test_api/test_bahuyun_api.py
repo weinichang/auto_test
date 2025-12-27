@@ -121,3 +121,22 @@ class Test_Bahuyun:
         assert response.json()["message"] == case["expected"]["response"]["message"]
         if case["case_id"] in ("contact_del_002", "contact_del_003", "contact_del_004"):
             assert response.json()["name"] == case["expected"]["response"]["name"]
+
+    @allure.story("接口名称：注册接口")
+    @pytest.mark.parametrize("case", read_yaml_cases("./case/test_register.yaml"),
+                             ids=[case["title"] for case in read_yaml_cases("./case/test_register.yaml")])
+    def test_register(self, case):
+        '''
+        注册接口；
+        3条用例；
+        登录成功的用例中提取“body”令牌
+        接口关联方案：通过yaml存储临时数据形式被其他接口调用，实现接口关联（12.26）；
+        此次接口关联方案不再使用全局变量
+        '''
+        response = RequestsUtil().all_requests(method=case["request"]["method"], url=case["request"]["url"],
+                                               headers=case["request"]["headers"], params=case["request"]["params"],
+                                               json=case["request"]["json"])
+        assert response.json()["status"] == case["expected"]["response"]["status"]
+        assert response.json()["message"] == case["expected"]["response"]["message"]
+        assert response.json()["body"][0]["message"] == case["expected"]["response"]["body"][0]["message"]
+
