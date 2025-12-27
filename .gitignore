@@ -45,6 +45,9 @@ htmlcov/
 nosetests.xml
 coverage.xml
 *.cover
+.pytest_cache/
+allure-result_temp/
+allure-report/
 
 # 日志文件
 logs/
@@ -66,6 +69,13 @@ logs/
 # Sublime Text
 *.sublime-workspace
 *.sublime-project
+
+
+# ========== 敏感/配置文件 ==========
+# 环境配置（根据实际情况调整，若配置文件需上传可删除这行）
+.env
+config/*.ini
+config/*.yaml
 
 # 密钥/证书
 *.pem
