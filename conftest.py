@@ -106,3 +106,5 @@ def pytest_runtest_makereport(item, call):
 def clean_datas():
     clean_yaml()
     yield
+    # clean_yaml()
+
