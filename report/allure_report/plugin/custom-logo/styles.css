@@ -1,0 +1,10 @@
+.side-nav__brand {
+  background: url('pop_fishing.png') no-repeat left center !important;
+  margin-left: 20px;
+  height:90px;
+  background-size: contain; !important;
+}
+
+.side-nav__brand-text{
+  display: none;
+}

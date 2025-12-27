@@ -1,0 +1,13 @@
+pytest
+requests
+selenium
+pytest-html
+pytest-xdist
+pytest-ordering
+allure-pytest
+pyyaml
+pytest-rerunfailures
+pytest-result-log
+pytest-selenium
+responses_validator
+pytest-base-url

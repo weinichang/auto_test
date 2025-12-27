@@ -1,0 +1,22 @@
+cases:
+  - case_id: contact_list_001
+    feature: 模块名称：联系人模块
+    story: 接口名称：联系人列表
+    title: 用例名称：检查新创建的联系人
+    request:
+      method: GET
+      url: "https://bahuyun.com/bd-api/contact/list_self"
+      headers: { }
+      params:
+        search: ""
+        tag: ""
+        page: 1
+      json: { }
+    expected:
+      status_code: 200
+      response:
+        status: 200
+        message: "OK"
+        body:
+          items:
+            - id: ""

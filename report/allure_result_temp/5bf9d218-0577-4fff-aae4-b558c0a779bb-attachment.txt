@@ -1,0 +1,3 @@
+WARNING  pytest_result_log:plugin.py:122 Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_del_contact[用例名称：删除联系人]
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://bahuyun.com:443 "POST /bd-api/contact/del/1478705877667545088 HTTP/1.1" 200 None
+WARNING  pytest_result_log:plugin.py:128 End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_del_contact[用例名称：删除联系人]

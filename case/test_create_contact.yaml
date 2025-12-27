@@ -1,0 +1,50 @@
+cases:
+  - case_id: contact_001
+    feature: 模块名称：联系人模块
+    story: 接口名称：创建联系人接口
+    title: 用例名称：添加我的联系人
+    request:
+      method: POST
+      url: "https://bahuyun.com/bd-api/contact/create"
+      headers: { }
+      json:
+        name: "糖果"
+        mobile: ""
+        email: ""
+        phone: ""
+        company: ""
+        address: ""
+        job_title: ""
+        note: ""
+    expected:
+      status_code: 200
+      response:
+        status: 200
+        message: "OK"
+        body: { }
+
+  - case_id: contact_002
+    feature: 模块名称：联系人模块
+    story: 接口名称：创建联系人接口
+    title: 用例名称：添加联系人不填写名字
+    request:
+      method: POST
+      url: "https://bahuyun.com/bd-api/contact/create"
+      headers: { }
+      json:
+        name: ""
+        mobile: ""
+        email: ""
+        phone: ""
+        company: ""
+        address: ""
+        job_title: ""
+        note: ""
+    expected:
+      status_code: 200
+      response:
+        status: 422
+        message: "Data Validation Failed."
+        body:
+          - field: "name"
+            message: "必需"

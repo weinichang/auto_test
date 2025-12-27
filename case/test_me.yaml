@@ -1,0 +1,21 @@
+cases:
+  - case_id: me_001
+    feature: 模块名称：我的模块
+    story: 接口名称：我的接口
+    title: 用例名称：检查我的接口数据
+    request:
+      method: GET
+      url: "https://bahuyun.com/bd-api/user/me"
+      headers: { }
+    json: { }
+    expected:
+      status_code: 200
+      response:
+        status: 200
+        message: "OK"
+        code: 0
+        body:
+          nickname: "维尼常"
+          mobile: "13811491621"
+          isWxBound: True
+          id: 1463069991961624577

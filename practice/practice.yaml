@@ -1,0 +1,39 @@
+  - case_id: login_001
+    feature: 模块名称：登录模块
+    story: 接口名称：登录接口
+    title: 正确账号密码登录成功
+    request:
+      method: POST
+      url: "https://bahuyun.com/bd-api/user/token"
+      headers: {}
+#        Content-Type: "application/json"
+#        Accept: "application/json, text/plain, */*"
+#        User-Agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+      json:
+        account: "13811491621"
+        password: "chang1long"
+    expected:
+      status_code: 200
+      response:
+        status: 200
+        message: "OK"
+
+  - case_id: login_002
+    feature: 模块名称：登录模块
+    story: 接口名称：登录接口
+    title: 正确账号密码登录成功
+    request:
+      method: POST
+      url: "https://bahuyun.com/bd-api/user/token"
+      headers: { }
+      #        Content-Type: "application/json"
+      #        Accept: "application/json, text/plain, */*"
+      #        User-Agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+      json:
+        account: "13811491621"
+        password: "chang1long"
+    expected:
+      status_code: 200
+      response:
+        status: 200
+        message: "OK"

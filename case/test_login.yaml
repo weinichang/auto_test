@@ -1,0 +1,68 @@
+cases:
+  - case_id: login_001
+    feature: 模块名称：登录模块
+    story: 接口名称：登录接口
+    title: 用例名称：正确账号密码登录成功
+    request:
+      method: POST
+      url: "https://bahuyun.com/bd-api/user/token"
+      headers: { }
+      json:
+        account: "13811491621"
+        password: "chang1long"
+    expected:
+      status_code: 200
+      response:
+        status: 200
+        message: "OK"
+
+  - case_id: login_002
+    feature: 模块名称：登录模块
+    story: 接口名称：登录接口
+    title: 用例名称：密码错误登录失败
+    request:
+      method: POST
+      url: "https://bahuyun.com/bd-api/user/token"
+      headers: { }
+      json:
+        username: "13811491621"
+        password: "111111"
+    expected:
+      status_code: 200
+      response:
+        status: 401
+        message: "账号或密码不正确"
+
+  - case_id: login_003
+    feature: 模块名称：登录模块
+    story: 接口名称：登录接口
+    title: 用例名称：账号密码格式错误
+    request:
+      method: POST
+      url: "https://bahuyun.com/bd-api/user/token"
+      headers: { }
+      json:
+        username: "fdfddfdsfdsfd"
+        password: "你好"
+    expected:
+      status_code: 200
+      response:
+        status: 401
+        message: "账号或密码不正确"
+
+  - case_id: login_004
+    feature: 模块名称：登录模块
+    story: 接口名称：登录接口
+    title: 用例名称：账号为空登录失败
+    request:
+      method: POST
+      url: "https://bahuyun.com/bd-api/user/token"
+      headers: { }
+      json:
+        username: null
+        password: null
+    expected:
+      status_code: 200
+      response:
+        status: 401
+        message: "账号或密码不正确"
