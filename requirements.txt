@@ -7,7 +7,6 @@ pytest-ordering
 allure-pytest
 pyyaml
 pytest-rerunfailures
-pytest-result-log
 pytest-selenium
 responses_validator
 pytest-base-url
