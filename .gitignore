@@ -1,0 +1,72 @@
+# ========== 操作系统相关 ==========
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.nfs*
+
+
+# ========== Python项目通用 ==========
+# 字节码文件
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 依赖包目录
+venv/
+.env/
+env/
+ENV/
+.virtualenv/
+.pytest_cache/
+
+# 安装包/分发文件
+*.egg
+*.egg-info/
+dist/
+build/
+*.whl
+*.tar.gz
+
+# 测试/覆盖率报告
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+
+# 日志文件
+logs/
+*.log
+*.log.*
+
+
+# ========== PyCharm/IDE相关 ==========
+# PyCharm
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# 密钥/证书
+*.pem
+*.key
