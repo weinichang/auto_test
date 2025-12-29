@@ -90,8 +90,26 @@ def clean_yaml(path):
 clean_yaml("./practice.yaml")
 # print(read_yaml("./practice.yaml"))
 '''
-import yaml
 
-with open("../practice/practice.yaml", 'r', encoding="utf-8") as f:
-    data = yaml.safe_load(f)
-print(data)
+value = {
+    "file": "/Users/changyilong/PycharmProjects/pytest/material/sc1.jpg"
+}
+
+MIME_TYPE_MAP = {
+                    "jpg": "image/jpeg",
+                    "jpeg": "image/jpeg",
+                    "png": "image/png",
+                    "txt": "text/plain",
+                    "pdf": "application/pdf",
+                    "doc": "application/msword",
+                    "docx": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                    "xls": "application/vnd.ms-excel",
+                    "xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            }
+for file_key, file_value in value.items():
+     with open(file_value, "rb") as f:
+          file_content = f.read()
+     file_name = file_value.split("/")[-1]
+     file_mine = MIME_TYPE_MAP.get(file_name.split(".")[-1].lower())
+     # value[file_key] = (file_name, file_content,file_mine)
+     print(file_name, file_content,file_mine)

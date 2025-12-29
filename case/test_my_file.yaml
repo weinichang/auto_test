@@ -1,0 +1,24 @@
+cases:
+  - case_id: my_file_001
+    feature: 模块名称：我的素材
+    story: 接口名称：我的素材接口
+    title: 用例名称：检查我的素材数据
+    request:
+      method: GET
+      url: "https://bahuyun.com/bd-api/file/list_org_my_file"
+      headers: { }
+      params:
+        org_id: 1463069991974207488
+        expand: "tags"
+        page: 1
+        size_range: "0-100000000000"
+    json: { }
+    expected:
+      status_code: 200
+      response:
+        status: 200
+        message: "OK"
+        code: 0
+        body:
+          items:
+            - {}

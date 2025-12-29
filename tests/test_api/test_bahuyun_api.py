@@ -21,9 +21,11 @@ class Test_Bahuyun:
         接口关联方案：通过yaml存储临时数据形式被其他接口调用，实现接口关联（12.26）；
         此次接口关联方案不再使用全局变量
         '''
+        headers = case["request"]["headers"]
+        headers["Content-Type"] = "application/json"
         # 使用封装的RequestsUtil().all_requests，自动关联cookie，实现持久化
         response = RequestsUtil().all_requests(method=case["request"]["method"], url=case["request"]["url"],
-                                               headers=case["request"]["headers"],
+                                               headers=headers,
                                                json=case["request"]["json"])
         if case["case_id"] == "login_001":
             # 取值后以字典类型写入，方便yaml文件写入和读取
@@ -43,7 +45,7 @@ class Test_Bahuyun:
         放弃全局变量
         '''
         headers = case["request"]["headers"]
-        # 读取yaml中的auth数据
+        headers["Content-Type"] = "application/json"
         headers["authorization"] = f"Bearer {read_yaml("auth")}"
         response = RequestsUtil().all_requests(method=case["request"]["method"], url=case["request"]["url"],
                                                headers=headers)
@@ -68,6 +70,7 @@ class Test_Bahuyun:
         此次接口关联方案不再使用全局变量
         '''
         headers = case["request"]["headers"]
+        headers["Content-Type"] = "application/json"
         headers["authorization"] = f"Bearer {read_yaml("auth")}"
         response = RequestsUtil().all_requests(method=case["request"]["method"], url=case["request"]["url"],
                                                headers=headers, json=case["request"]["json"])
@@ -91,6 +94,7 @@ class Test_Bahuyun:
         1条用例；
         '''
         headers = case["request"]["headers"]
+        headers["Content-Type"] = "application/json"
         headers["authorization"] = f"Bearer {read_yaml("auth")}"
         response = RequestsUtil().all_requests(method=case["request"]["method"], url=case["request"]["url"],
                                                headers=headers, params=case["request"]["params"])
@@ -109,6 +113,7 @@ class Test_Bahuyun:
         2条用例；
         '''
         headers = case["request"]["headers"]
+        headers["Content-Type"] = "application/json"
         headers["authorization"] = f"Bearer {read_yaml("auth")}"
         if case["case_id"] in ("contact_del_001", "contact_del_003"):
             url = case["request"]["url"] + str(read_yaml("contact_id"))
@@ -133,10 +138,49 @@ class Test_Bahuyun:
         接口关联方案：通过yaml存储临时数据形式被其他接口调用，实现接口关联（12.26）；
         此次接口关联方案不再使用全局变量
         '''
+        headers = case["request"]["headers"]
+        headers["Content-Type"] = "application/json"
+
         response = RequestsUtil().all_requests(method=case["request"]["method"], url=case["request"]["url"],
-                                               headers=case["request"]["headers"], params=case["request"]["params"],
+                                               headers=headers, params=case["request"]["params"],
                                                json=case["request"]["json"])
         assert response.json()["status"] == case["expected"]["response"]["status"]
         assert response.json()["message"] == case["expected"]["response"]["message"]
         assert response.json()["body"][0]["message"] == case["expected"]["response"]["body"][0]["message"]
 
+    @allure.story("接口名称：我的素材")
+    @pytest.mark.parametrize("case", read_yaml_cases("./case/test_my_file.yaml"),
+                             ids=[case["title"] for case in read_yaml_cases("./case/test_my_file.yaml")])
+    def test_my_file(self, case):
+        '''
+        我的素材接口；
+        1条用例；
+        登录成功的用例中提取“body”令牌
+        '''
+        headers = case["request"]["headers"]
+        # headers["Content-Type"] = "application/json"
+        headers["authorization"] = f"Bearer {read_yaml("auth")}"
+        response = RequestsUtil().all_requests(method=case["request"]["method"], url=case["request"]["url"],
+                                               headers=headers, params=case["request"]["params"])
+        assert response.json()["status"] == case["expected"]["response"]["status"]
+        assert response.json()["message"] == case["expected"]["response"]["message"]
+
+    @allure.story("接口名称：上传素材")
+    @pytest.mark.parametrize("case", read_yaml_cases("./case/test_upload_my_file.yaml"),
+                             ids=[case["title"] for case in read_yaml_cases("./case/test_upload_my_file.yaml")])
+    def test_upload_my_file(self, case):
+        '''
+        上传素材接口；
+        1条用例；
+        登录成功的用例中提取“body”令牌
+        '''
+        headers = case["request"]["headers"]
+        headers["authorization"] = f"Bearer {read_yaml("auth")}"
+
+        response = RequestsUtil().all_requests(method=case["request"]["method"], url=case["request"]["url"],
+                                               headers=headers, params=case["request"]["params"],
+                                               files=case["request"]["datas"])
+
+        assert response.json()["status"] == case["expected"]["response"]["status"]
+        assert response.json()["message"] == case["expected"]["response"]["message"]
+        assert response.json()["body"]["code"] == case["expected"]["response"]["body"]["code"]

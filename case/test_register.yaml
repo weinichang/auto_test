@@ -25,4 +25,56 @@ cases:
           - field: account
             message: "账号输入错误"
 
+  - case_id: register_002
+    feature: 模块名称：注册模块
+    story: 接口名称：注册接口
+    title: 用例名称：账号已注册
+    request:
+      method: POST
+      url: "https://bahuyun.com/bd-api/user/register"
+      headers: { }
+      params:
+        bd_vid: "null"
+        bd_ch: "null"
+        bd_sem_timestamp: 1765448324
+      json:
+        account: "13811491621"
+        password: "1"
+        nickname: "1"
+        vcode: "1"
+    expected:
+      status_code: 200
+      response:
+        status: 422
+        message: "Data Validation Failed."
+        body:
+          - field: account
+            message: "账号已注册"
+
+  - case_id: register_003
+    feature: 模块名称：注册模块
+    story: 接口名称：注册接口
+    title: 用例名称：验证码不正确
+    request:
+      method: POST
+      url: "https://bahuyun.com/bd-api/user/register"
+      headers: { }
+      params:
+        bd_vid: "null"
+        bd_ch: "null"
+        bd_sem_timestamp: 1765448324
+      json:
+        account: "15101109489"
+        password: "123456"
+        nickname: "八狐表单用户"
+        vcode: "123456"
+    expected:
+      status_code: 200
+      response:
+        status: 422
+        message: "Data Validation Failed."
+        body:
+          - field: vcode
+            message: "验证码不匹配"
+
 
