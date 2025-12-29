@@ -9,6 +9,8 @@ from selenium.webdriver.common.by import By
 
 from commons.yaml_util import clean_yaml
 
+from commons.mysql_util import MySQLUtil
+
 
 # 设置fixture的作用域为session
 # 基础fixture，浏览器初始化
@@ -108,3 +110,18 @@ def clean_datas():
     yield
     # clean_yaml()
 
+# 实例化mysql
+@pytest.fixture(scope="session")  # 会话级别：整个测试会话只连接/关闭一次
+def mysql_conn():
+    # 1. 前置条件：初始化数据库连接
+    db = MySQLUtil(
+        host="localhost",
+        port=3306,
+        user="root",
+        password="chang0728",
+        db="test"
+    )
+    yield db  # 将db对象传递给用例
+
+    # 2. 后置条件：关闭数据库连接
+    db.close()

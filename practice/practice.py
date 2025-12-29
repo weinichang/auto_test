@@ -91,25 +91,22 @@ clean_yaml("./practice.yaml")
 # print(read_yaml("./practice.yaml"))
 '''
 
-value = {
-    "file": "/Users/changyilong/PycharmProjects/pytest/material/sc1.jpg"
-}
+# import pymysql
+#
+# conn = pymysql.connect(host='localhost', user='root', password='chang0728', db='test', charset='utf8', port=3306)
+# cursor = conn.cursor()
+# cursor.execute("SELECT * from user_profile where university = '浙江大学'")
+# print(len(cursor.fetchall()))
+from commons.mysql_util import MySQLUtil
 
-MIME_TYPE_MAP = {
-                    "jpg": "image/jpeg",
-                    "jpeg": "image/jpeg",
-                    "png": "image/png",
-                    "txt": "text/plain",
-                    "pdf": "application/pdf",
-                    "doc": "application/msword",
-                    "docx": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-                    "xls": "application/vnd.ms-excel",
-                    "xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-            }
-for file_key, file_value in value.items():
-     with open(file_value, "rb") as f:
-          file_content = f.read()
-     file_name = file_value.split("/")[-1]
-     file_mine = MIME_TYPE_MAP.get(file_name.split(".")[-1].lower())
-     # value[file_key] = (file_name, file_content,file_mine)
-     print(file_name, file_content,file_mine)
+db = MySQLUtil(
+        host="localhost",
+        port=3306,
+        user="root",
+        password="chang0728",
+        db="test"
+    )
+sql = "SELECT * from user_profile where university = '北京大学'"
+print(db.query(sql))
+print(db.query(sql)[0]["device_id"])
+db.close()

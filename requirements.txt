@@ -10,3 +10,4 @@ pytest-rerunfailures
 pytest-selenium
 responses_validator
 pytest-base-url
+pymysql
