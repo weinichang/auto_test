@@ -22,7 +22,6 @@ class Test_Bahuyun:
         此次接口关联方案不再使用全局变量
         '''
         headers = case["request"]["headers"]
-        headers["Content-Type"] = "application/json"
         # 使用封装的RequestsUtil().all_requests，自动关联cookie，实现持久化
         response = RequestsUtil().all_requests(method=case["request"]["method"], url=case["request"]["url"],
                                                headers=headers,
@@ -45,7 +44,6 @@ class Test_Bahuyun:
         放弃全局变量
         '''
         headers = case["request"]["headers"]
-        headers["Content-Type"] = "application/json"
         headers["authorization"] = f"Bearer {read_yaml("auth")}"
         response = RequestsUtil().all_requests(method=case["request"]["method"], url=case["request"]["url"],
                                                headers=headers)
@@ -70,7 +68,6 @@ class Test_Bahuyun:
         此次接口关联方案不再使用全局变量
         '''
         headers = case["request"]["headers"]
-        headers["Content-Type"] = "application/json"
         headers["authorization"] = f"Bearer {read_yaml("auth")}"
         response = RequestsUtil().all_requests(method=case["request"]["method"], url=case["request"]["url"],
                                                headers=headers, json=case["request"]["json"])
@@ -94,7 +91,6 @@ class Test_Bahuyun:
         1条用例；
         '''
         headers = case["request"]["headers"]
-        headers["Content-Type"] = "application/json"
         headers["authorization"] = f"Bearer {read_yaml("auth")}"
         response = RequestsUtil().all_requests(method=case["request"]["method"], url=case["request"]["url"],
                                                headers=headers, params=case["request"]["params"])
@@ -113,7 +109,6 @@ class Test_Bahuyun:
         2条用例；
         '''
         headers = case["request"]["headers"]
-        headers["Content-Type"] = "application/json"
         headers["authorization"] = f"Bearer {read_yaml("auth")}"
         if case["case_id"] in ("contact_del_001", "contact_del_003"):
             url = case["request"]["url"] + str(read_yaml("contact_id"))
@@ -139,8 +134,6 @@ class Test_Bahuyun:
         此次接口关联方案不再使用全局变量
         '''
         headers = case["request"]["headers"]
-        headers["Content-Type"] = "application/json"
-
         response = RequestsUtil().all_requests(method=case["request"]["method"], url=case["request"]["url"],
                                                headers=headers, params=case["request"]["params"],
                                                json=case["request"]["json"])
@@ -158,20 +151,19 @@ class Test_Bahuyun:
         登录成功的用例中提取“body”令牌
         '''
         headers = case["request"]["headers"]
-        # headers["Content-Type"] = "application/json"
         headers["authorization"] = f"Bearer {read_yaml("auth")}"
         response = RequestsUtil().all_requests(method=case["request"]["method"], url=case["request"]["url"],
                                                headers=headers, params=case["request"]["params"])
         assert response.json()["status"] == case["expected"]["response"]["status"]
         assert response.json()["message"] == case["expected"]["response"]["message"]
 
-    @allure.story("接口名称：上传素材")
+    @allure.story("接口名称：上传素材接口")
     @pytest.mark.parametrize("case", read_yaml_cases("./case/test_upload_my_file.yaml"),
                              ids=[case["title"] for case in read_yaml_cases("./case/test_upload_my_file.yaml")])
     def test_upload_my_file(self, case):
         '''
         上传素材接口；
-        1条用例；
+        4条用例；
         登录成功的用例中提取“body”令牌
         '''
         headers = case["request"]["headers"]
@@ -183,4 +175,8 @@ class Test_Bahuyun:
 
         assert response.json()["status"] == case["expected"]["response"]["status"]
         assert response.json()["message"] == case["expected"]["response"]["message"]
-        assert response.json()["body"]["code"] == case["expected"]["response"]["body"]["code"]
+        assert response.json()["code"] == case["expected"]["response"]["code"]
+        if case["case_id"] == "upload_my_file_001":
+            assert response.json()["body"]["code"] == case["expected"]["response"]["body"]["code"]
+        elif case["case_id"] != "upload_my_file_001":
+            assert response.json()["name"] == case["expected"]["response"]["name"]

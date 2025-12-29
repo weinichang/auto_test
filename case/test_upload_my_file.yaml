@@ -1,8 +1,8 @@
 cases:
-  - case_id: my_file_001
-    feature: 模块名称：上传素材
+  - case_id: upload_my_file_001
+    feature: 模块名称：我的素材
     story: 接口名称：上传素材接口
-    title: 用例名称：上传素材数据
+    title: 用例名称：成功上传素材
     request:
       method: POST
       url: "https://bahuyun.com/bd-api/file/upload_org_my_file"
@@ -17,5 +17,74 @@ cases:
       response:
         status: 200
         message: "OK"
+        code: 0
         body:
           code: 200
+
+  - case_id: upload_my_file_002
+    feature: 模块名称：我的素材
+    story: 接口名称：上传素材接口
+    title: 用例名称：上传非图片类型文件失败
+    request:
+      method: POST
+      url: "https://bahuyun.com/bd-api/file/upload_org_my_file"
+      headers: { }
+      params:
+        org_id: 1463069991974207488
+      datas:
+        file: "/Users/changyilong/PycharmProjects/pytest/material/2.txt"
+    json: { }
+    expected:
+      status_code: 200
+      response:
+        status: 403
+        message: "文件大小超过限制，限0M"
+        code: 600
+        name: "Forbidden"
+        body: { }
+
+  - case_id: upload_my_file_003
+    feature: 模块名称：我的素材
+    story: 接口名称：上传素材接口
+    title: 用例名称：Header中传错Content-Type
+    request:
+      method: POST
+      url: "https://bahuyun.com/bd-api/file/upload_org_my_file"
+      headers: {
+        "Content-Type": "application/json"
+      }
+      params:
+        org_id: 1463069991974207488
+      datas:
+        file: "/Users/changyilong/PycharmProjects/pytest/material/sc1.jpg"
+    json: { }
+    expected:
+      status_code: 200
+      response:
+        status: 500
+        message: "服务器内部错误。"
+        code: 0
+        name: "Internal Server Error"
+        body: { }
+
+  - case_id: upload_my_file_004
+    feature: 模块名称：我的素材
+    story: 接口名称：上传素材接口
+    title: 用例名称：上传超过5M的图片失败
+    request:
+      method: POST
+      url: "https://bahuyun.com/bd-api/file/upload_org_my_file"
+      headers: { }
+      params:
+        org_id: 1463069991974207488
+      datas:
+        file: "/Users/changyilong/PycharmProjects/pytest/material/WechatIMG124.jpg"
+    json: { }
+    expected:
+      status_code: 200
+      response:
+        status: 403
+        message: "文件大小超过限制，限5M"
+        code: 600
+        name: "Forbidden"
+        body: { }
