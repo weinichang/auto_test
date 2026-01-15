@@ -97,16 +97,16 @@ clean_yaml("./practice.yaml")
 # cursor = conn.cursor()
 # cursor.execute("SELECT * from user_profile where university = '浙江大学'")
 # print(len(cursor.fetchall()))
-from commons.mysql_util import MySQLUtil
-
-db = MySQLUtil(
-        host="localhost",
-        port=3306,
-        user="root",
-        password="chang0728",
-        db="test"
-    )
-sql = "SELECT * from user_profile where university = '北京大学'"
-print(db.query(sql))
-print(db.query(sql)[0]["device_id"])
-db.close()
+# from commons.mysql_util import MySQLUtil
+#
+# db = MySQLUtil(
+#         host="localhost",
+#         port=3306,
+#         user="root",
+#         password="chang0728",
+#         db="test"
+#     )
+# sql = "SELECT * from user_profile where university = '北京大学'"
+# print(db.query(sql))
+# print(db.query(sql)[0]["device_id"])
+# db.close()

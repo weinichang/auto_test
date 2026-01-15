@@ -19,4 +19,4 @@ cases:
         status: 200
         message: "OK"
         code: 0
-      db: "SELECT * from user_profile where university = '浙江大学'"
+#      db: "SELECT * from user_profile where university = '浙江大学'"

@@ -1,8 +1,9 @@
 # ========== 操作系统相关 ==========
-# macOS
+# 系统 / IDE 生成的文件，macOS、PyCharm
 .DS_Store
 .AppleDouble
 .LSOverride
+.idea/
 
 # Windows
 Thumbs.db
@@ -21,13 +22,14 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# 依赖包目录
-venv/
+# 依赖 / 环境文件目录
+.venv/
 .env/
 env/
 ENV/
 .virtualenv/
 .pytest_cache/
+node_modules/
 
 # 安装包/分发文件
 *.egg

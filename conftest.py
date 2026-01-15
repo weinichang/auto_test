@@ -9,7 +9,7 @@ from selenium.webdriver.common.by import By
 
 from commons.yaml_util import clean_yaml
 
-from commons.mysql_util import MySQLUtil
+# from commons.mysql_util import MySQLUtil
 
 
 # 设置fixture的作用域为session
@@ -109,7 +109,7 @@ def clean_datas():
     clean_yaml()
     yield
     # clean_yaml()
-
+'''
 # 实例化mysql
 @pytest.fixture(scope="session")  # 会话级别：整个测试会话只连接/关闭一次
 def mysql_conn():
@@ -125,3 +125,4 @@ def mysql_conn():
 
     # 2. 后置条件：关闭数据库连接
     db.close()
+'''

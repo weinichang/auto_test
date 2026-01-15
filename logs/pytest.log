@@ -1,81 +1,81 @@
-WARNING  2025-12-30 00:01:38 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_login[用例名称：正确账号密码登录成功]
-DEBUG    2025-12-30 00:01:38 [urllib3.connectionpool:1049] _new_conn : Starting new HTTPS connection (1): bahuyun.com:443
-DEBUG    2025-12-30 00:01:39 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "POST /bd-api/user/token HTTP/1.1" 200 None
-INFO     2025-12-30 00:01:39 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_login[用例名称：正确账号密码登录成功]): 
-WARNING  2025-12-30 00:01:39 [pytest_result_log:128] pytest_runtest_teardown : End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_login[用例名称：正确账号密码登录成功]
-WARNING  2025-12-30 00:01:39 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_login[用例名称：密码错误登录失败]
-DEBUG    2025-12-30 00:01:39 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "POST /bd-api/user/token HTTP/1.1" 200 None
-INFO     2025-12-30 00:01:39 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_login[用例名称：密码错误登录失败]): 
-WARNING  2025-12-30 00:01:39 [pytest_result_log:128] pytest_runtest_teardown : End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_login[用例名称：密码错误登录失败]
-WARNING  2025-12-30 00:01:39 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_login[用例名称：账号密码格式错误]
-DEBUG    2025-12-30 00:01:39 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "POST /bd-api/user/token HTTP/1.1" 200 None
-INFO     2025-12-30 00:01:39 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_login[用例名称：账号密码格式错误]): 
-WARNING  2025-12-30 00:01:39 [pytest_result_log:128] pytest_runtest_teardown : End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_login[用例名称：账号密码格式错误]
-WARNING  2025-12-30 00:01:39 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_login[用例名称：账号为空登录失败]
-DEBUG    2025-12-30 00:01:39 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "POST /bd-api/user/token HTTP/1.1" 200 None
-INFO     2025-12-30 00:01:39 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_login[用例名称：账号为空登录失败]): 
-WARNING  2025-12-30 00:01:39 [pytest_result_log:128] pytest_runtest_teardown : End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_login[用例名称：账号为空登录失败]
-WARNING  2025-12-30 00:01:39 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_me[用例名称：检查我的接口数据]-
-DEBUG    2025-12-30 00:01:39 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "GET /bd-api/user/me HTTP/1.1" 200 None
-INFO     2025-12-30 00:01:39 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_me[用例名称：检查我的接口数据]): 
-WARNING  2025-12-30 00:01:39 [pytest_result_log:128] pytest_runtest_teardown : -End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_me[用例名称：检查我的接口数据]--
-WARNING  2025-12-30 00:01:39 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_create_contact[用例名称：添加我的联系人]
-DEBUG    2025-12-30 00:01:40 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "POST /bd-api/contact/create HTTP/1.1" 200 None
-INFO     2025-12-30 00:01:40 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_create_contact[用例名称：添加我的联系人]): 
-WARNING  2025-12-30 00:01:40 [pytest_result_log:128] pytest_runtest_teardown : End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_create_contact[用例名称：添加我的联系人]
-WARNING  2025-12-30 00:01:40 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_create_contact[用例名称：添加联系人不填写名字]
-DEBUG    2025-12-30 00:01:40 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "POST /bd-api/contact/create HTTP/1.1" 200 None
-INFO     2025-12-30 00:01:40 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_create_contact[用例名称：添加联系人不填写名字]): 
-WARNING  2025-12-30 00:01:40 [pytest_result_log:128] pytest_runtest_teardown : End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_create_contact[用例名称：添加联系人不填写名字]
-WARNING  2025-12-30 00:01:40 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_contact_list[用例名称：检查新创建的联系人]
-DEBUG    2025-12-30 00:01:40 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "GET /bd-api/contact/list_self?search=&tag=&page=1 HTTP/1.1" 200 None
-INFO     2025-12-30 00:01:40 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_contact_list[用例名称：检查新创建的联系人]): 
-WARNING  2025-12-30 00:01:40 [pytest_result_log:128] pytest_runtest_teardown : End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_contact_list[用例名称：检查新创建的联系人]
-WARNING  2025-12-30 00:01:40 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_del_contact[用例名称：删除联系人]
-DEBUG    2025-12-30 00:01:40 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "POST /bd-api/contact/del/1479794658134982656 HTTP/1.1" 200 None
-INFO     2025-12-30 00:01:40 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_del_contact[用例名称：删除联系人]): 
-WARNING  2025-12-30 00:01:40 [pytest_result_log:128] pytest_runtest_teardown : End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_del_contact[用例名称：删除联系人]
-WARNING  2025-12-30 00:01:40 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_del_contact[用例名称：删除错误的联系人id]
-DEBUG    2025-12-30 00:01:40 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "POST /bd-api/contact/del/2dfdfd2 HTTP/1.1" 200 None
-INFO     2025-12-30 00:01:40 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_del_contact[用例名称：删除错误的联系人id]): 
-WARNING  2025-12-30 00:01:40 [pytest_result_log:128] pytest_runtest_teardown : End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_del_contact[用例名称：删除错误的联系人id]
-WARNING  2025-12-30 00:01:40 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_del_contact[用例名称：删除已删除的联系人]
-DEBUG    2025-12-30 00:01:40 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "POST /bd-api/contact/del/1479794658134982656 HTTP/1.1" 200 None
-INFO     2025-12-30 00:01:40 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_del_contact[用例名称：删除已删除的联系人]): 
-WARNING  2025-12-30 00:01:40 [pytest_result_log:128] pytest_runtest_teardown : End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_del_contact[用例名称：删除已删除的联系人]
-WARNING  2025-12-30 00:01:40 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_del_contact[用例名称：不填写联系人id]
-DEBUG    2025-12-30 00:01:40 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "POST /bd-api/contact/del/ HTTP/1.1" 200 None
-INFO     2025-12-30 00:01:40 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_del_contact[用例名称：不填写联系人id]): 
-WARNING  2025-12-30 00:01:40 [pytest_result_log:128] pytest_runtest_teardown : End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_del_contact[用例名称：不填写联系人id]
-WARNING  2025-12-30 00:01:40 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_register[用例名称：输入不合规的手机号]
-DEBUG    2025-12-30 00:01:40 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "POST /bd-api/user/register?bd_vid=null&bd_ch=null&bd_sem_timestamp=1765448324 HTTP/1.1" 200 None
-INFO     2025-12-30 00:01:40 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_register[用例名称：输入不合规的手机号]): 
-WARNING  2025-12-30 00:01:40 [pytest_result_log:128] pytest_runtest_teardown : End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_register[用例名称：输入不合规的手机号]
-WARNING  2025-12-30 00:01:40 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_register[用例名称：账号已注册]
-DEBUG    2025-12-30 00:01:40 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "POST /bd-api/user/register?bd_vid=null&bd_ch=null&bd_sem_timestamp=1765448324 HTTP/1.1" 200 None
-INFO     2025-12-30 00:01:40 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_register[用例名称：账号已注册]): 
-WARNING  2025-12-30 00:01:40 [pytest_result_log:128] pytest_runtest_teardown : End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_register[用例名称：账号已注册]
-WARNING  2025-12-30 00:01:40 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_register[用例名称：验证码不正确]
-DEBUG    2025-12-30 00:01:40 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "POST /bd-api/user/register?bd_vid=null&bd_ch=null&bd_sem_timestamp=1765448324 HTTP/1.1" 200 None
-INFO     2025-12-30 00:01:40 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_register[用例名称：验证码不正确]): 
-WARNING  2025-12-30 00:01:40 [pytest_result_log:128] pytest_runtest_teardown : End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_register[用例名称：验证码不正确]
-WARNING  2025-12-30 00:01:40 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_my_file[用例名称：检查我的素材数据]
-DEBUG    2025-12-30 00:01:40 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "GET /bd-api/file/list_org_my_file?org_id=1463069991974207488&expand=tags&page=1&size_range=0-100000000000 HTTP/1.1" 200 None
-INFO     2025-12-30 00:01:40 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_my_file[用例名称：检查我的素材数据]): 
-WARNING  2025-12-30 00:01:40 [pytest_result_log:128] pytest_runtest_teardown : End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_my_file[用例名称：检查我的素材数据]
-WARNING  2025-12-30 00:01:40 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_upload_my_file[用例名称：成功上传素材]
-DEBUG    2025-12-30 00:01:41 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "POST /bd-api/file/upload_org_my_file?org_id=1463069991974207488 HTTP/1.1" 200 None
-INFO     2025-12-30 00:01:41 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_upload_my_file[用例名称：成功上传素材]): 
-WARNING  2025-12-30 00:01:41 [pytest_result_log:128] pytest_runtest_teardown : End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_upload_my_file[用例名称：成功上传素材]
-WARNING  2025-12-30 00:01:41 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_upload_my_file[用例名称：上传非图片类型文件失败]
-DEBUG    2025-12-30 00:01:41 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "POST /bd-api/file/upload_org_my_file?org_id=1463069991974207488 HTTP/1.1" 200 None
-INFO     2025-12-30 00:01:41 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_upload_my_file[用例名称：上传非图片类型文件失败]): 
-WARNING  2025-12-30 00:01:41 [pytest_result_log:128] pytest_runtest_teardown : End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_upload_my_file[用例名称：上传非图片类型文件失败]
-WARNING  2025-12-30 00:01:41 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_upload_my_file[用例名称：Header中传错Content-Type]
-DEBUG    2025-12-30 00:01:41 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "POST /bd-api/file/upload_org_my_file?org_id=1463069991974207488 HTTP/1.1" 200 None
-INFO     2025-12-30 00:01:41 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_upload_my_file[用例名称：Header中传错Content-Type]): 
-WARNING  2025-12-30 00:01:41 [pytest_result_log:128] pytest_runtest_teardown : End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_upload_my_file[用例名称：Header中传错Content-Type]
-WARNING  2025-12-30 00:01:41 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_upload_my_file[用例名称：上传超过5M的图片失败]
-DEBUG    2025-12-30 00:01:42 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "POST /bd-api/file/upload_org_my_file?org_id=1463069991974207488 HTTP/1.1" 200 None
-INFO     2025-12-30 00:01:42 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_upload_my_file[用例名称：上传超过5M的图片失败]): 
-WARNING  2025-12-30 00:01:42 [pytest_result_log:128] pytest_runtest_teardown : End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_upload_my_file[用例名称：上传超过5M的图片失败]
+WARNING  2026-01-15 13:57:02 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_login[用例名称：正确账号密码登录成功]
+DEBUG    2026-01-15 13:57:02 [urllib3.connectionpool:1049] _new_conn : Starting new HTTPS connection (1): bahuyun.com:443
+DEBUG    2026-01-15 13:57:03 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "POST /bd-api/user/token HTTP/1.1" 200 None
+INFO     2026-01-15 13:57:03 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_login[用例名称：正确账号密码登录成功]): 
+WARNING  2026-01-15 13:57:03 [pytest_result_log:128] pytest_runtest_teardown : End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_login[用例名称：正确账号密码登录成功]
+WARNING  2026-01-15 13:57:03 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_login[用例名称：密码错误登录失败]
+DEBUG    2026-01-15 13:57:03 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "POST /bd-api/user/token HTTP/1.1" 200 None
+INFO     2026-01-15 13:57:03 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_login[用例名称：密码错误登录失败]): 
+WARNING  2026-01-15 13:57:03 [pytest_result_log:128] pytest_runtest_teardown : End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_login[用例名称：密码错误登录失败]
+WARNING  2026-01-15 13:57:03 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_login[用例名称：账号密码格式错误]
+DEBUG    2026-01-15 13:57:04 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "POST /bd-api/user/token HTTP/1.1" 200 None
+INFO     2026-01-15 13:57:04 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_login[用例名称：账号密码格式错误]): 
+WARNING  2026-01-15 13:57:04 [pytest_result_log:128] pytest_runtest_teardown : End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_login[用例名称：账号密码格式错误]
+WARNING  2026-01-15 13:57:04 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_login[用例名称：账号为空登录失败]
+DEBUG    2026-01-15 13:57:04 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "POST /bd-api/user/token HTTP/1.1" 200 None
+INFO     2026-01-15 13:57:04 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_login[用例名称：账号为空登录失败]): 
+WARNING  2026-01-15 13:57:04 [pytest_result_log:128] pytest_runtest_teardown : End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_login[用例名称：账号为空登录失败]
+WARNING  2026-01-15 13:57:04 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_me[用例名称：检查我的接口数据]-
+DEBUG    2026-01-15 13:57:04 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "GET /bd-api/user/me HTTP/1.1" 200 None
+INFO     2026-01-15 13:57:04 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_me[用例名称：检查我的接口数据]): 
+WARNING  2026-01-15 13:57:04 [pytest_result_log:128] pytest_runtest_teardown : -End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_me[用例名称：检查我的接口数据]--
+WARNING  2026-01-15 13:57:04 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_create_contact[用例名称：添加我的联系人]
+DEBUG    2026-01-15 13:57:04 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "POST /bd-api/contact/create HTTP/1.1" 200 None
+INFO     2026-01-15 13:57:04 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_create_contact[用例名称：添加我的联系人]): 
+WARNING  2026-01-15 13:57:04 [pytest_result_log:128] pytest_runtest_teardown : End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_create_contact[用例名称：添加我的联系人]
+WARNING  2026-01-15 13:57:04 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_create_contact[用例名称：添加联系人不填写名字]
+DEBUG    2026-01-15 13:57:04 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "POST /bd-api/contact/create HTTP/1.1" 200 None
+INFO     2026-01-15 13:57:04 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_create_contact[用例名称：添加联系人不填写名字]): 
+WARNING  2026-01-15 13:57:04 [pytest_result_log:128] pytest_runtest_teardown : End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_create_contact[用例名称：添加联系人不填写名字]
+WARNING  2026-01-15 13:57:04 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_contact_list[用例名称：检查新创建的联系人]
+DEBUG    2026-01-15 13:57:04 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "GET /bd-api/contact/list_self?search=&tag=&page=1 HTTP/1.1" 200 None
+INFO     2026-01-15 13:57:04 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_contact_list[用例名称：检查新创建的联系人]): 
+WARNING  2026-01-15 13:57:04 [pytest_result_log:128] pytest_runtest_teardown : End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_contact_list[用例名称：检查新创建的联系人]
+WARNING  2026-01-15 13:57:04 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_del_contact[用例名称：删除联系人]
+DEBUG    2026-01-15 13:57:04 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "POST /bd-api/contact/del/1485803108186980352 HTTP/1.1" 200 None
+INFO     2026-01-15 13:57:04 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_del_contact[用例名称：删除联系人]): 
+WARNING  2026-01-15 13:57:04 [pytest_result_log:128] pytest_runtest_teardown : End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_del_contact[用例名称：删除联系人]
+WARNING  2026-01-15 13:57:04 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_del_contact[用例名称：删除错误的联系人id]
+DEBUG    2026-01-15 13:57:04 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "POST /bd-api/contact/del/2dfdfd2 HTTP/1.1" 200 None
+INFO     2026-01-15 13:57:04 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_del_contact[用例名称：删除错误的联系人id]): 
+WARNING  2026-01-15 13:57:04 [pytest_result_log:128] pytest_runtest_teardown : End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_del_contact[用例名称：删除错误的联系人id]
+WARNING  2026-01-15 13:57:04 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_del_contact[用例名称：删除已删除的联系人]
+DEBUG    2026-01-15 13:57:04 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "POST /bd-api/contact/del/1485803108186980352 HTTP/1.1" 200 None
+INFO     2026-01-15 13:57:04 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_del_contact[用例名称：删除已删除的联系人]): 
+WARNING  2026-01-15 13:57:04 [pytest_result_log:128] pytest_runtest_teardown : End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_del_contact[用例名称：删除已删除的联系人]
+WARNING  2026-01-15 13:57:04 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_del_contact[用例名称：不填写联系人id]
+DEBUG    2026-01-15 13:57:04 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "POST /bd-api/contact/del/ HTTP/1.1" 200 None
+INFO     2026-01-15 13:57:04 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_del_contact[用例名称：不填写联系人id]): 
+WARNING  2026-01-15 13:57:04 [pytest_result_log:128] pytest_runtest_teardown : End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_del_contact[用例名称：不填写联系人id]
+WARNING  2026-01-15 13:57:04 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_register[用例名称：输入不合规的手机号]
+DEBUG    2026-01-15 13:57:04 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "POST /bd-api/user/register?bd_vid=null&bd_ch=null&bd_sem_timestamp=1765448324 HTTP/1.1" 200 None
+INFO     2026-01-15 13:57:04 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_register[用例名称：输入不合规的手机号]): 
+WARNING  2026-01-15 13:57:04 [pytest_result_log:128] pytest_runtest_teardown : End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_register[用例名称：输入不合规的手机号]
+WARNING  2026-01-15 13:57:04 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_register[用例名称：账号已注册]
+DEBUG    2026-01-15 13:57:04 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "POST /bd-api/user/register?bd_vid=null&bd_ch=null&bd_sem_timestamp=1765448324 HTTP/1.1" 200 None
+INFO     2026-01-15 13:57:04 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_register[用例名称：账号已注册]): 
+WARNING  2026-01-15 13:57:04 [pytest_result_log:128] pytest_runtest_teardown : End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_register[用例名称：账号已注册]
+WARNING  2026-01-15 13:57:04 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_register[用例名称：验证码不正确]
+DEBUG    2026-01-15 13:57:04 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "POST /bd-api/user/register?bd_vid=null&bd_ch=null&bd_sem_timestamp=1765448324 HTTP/1.1" 200 None
+INFO     2026-01-15 13:57:04 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_register[用例名称：验证码不正确]): 
+WARNING  2026-01-15 13:57:04 [pytest_result_log:128] pytest_runtest_teardown : End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_register[用例名称：验证码不正确]
+WARNING  2026-01-15 13:57:04 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_my_file[用例名称：检查我的素材数据]
+DEBUG    2026-01-15 13:57:04 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "GET /bd-api/file/list_org_my_file?org_id=1463069991974207488&expand=tags&page=1&size_range=0-100000000000 HTTP/1.1" 200 None
+INFO     2026-01-15 13:57:04 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_my_file[用例名称：检查我的素材数据]): 
+WARNING  2026-01-15 13:57:04 [pytest_result_log:128] pytest_runtest_teardown : End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_my_file[用例名称：检查我的素材数据]
+WARNING  2026-01-15 13:57:05 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_upload_my_file[用例名称：成功上传素材]
+DEBUG    2026-01-15 13:57:05 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "POST /bd-api/file/upload_org_my_file?org_id=1463069991974207488 HTTP/1.1" 200 None
+INFO     2026-01-15 13:57:05 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_upload_my_file[用例名称：成功上传素材]): 
+WARNING  2026-01-15 13:57:05 [pytest_result_log:128] pytest_runtest_teardown : End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_upload_my_file[用例名称：成功上传素材]
+WARNING  2026-01-15 13:57:05 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_upload_my_file[用例名称：上传非图片类型文件失败]
+DEBUG    2026-01-15 13:57:05 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "POST /bd-api/file/upload_org_my_file?org_id=1463069991974207488 HTTP/1.1" 200 None
+INFO     2026-01-15 13:57:05 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_upload_my_file[用例名称：上传非图片类型文件失败]): 
+WARNING  2026-01-15 13:57:05 [pytest_result_log:128] pytest_runtest_teardown : End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_upload_my_file[用例名称：上传非图片类型文件失败]
+WARNING  2026-01-15 13:57:05 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_upload_my_file[用例名称：Header中传错Content-Type]
+DEBUG    2026-01-15 13:57:05 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "POST /bd-api/file/upload_org_my_file?org_id=1463069991974207488 HTTP/1.1" 200 None
+INFO     2026-01-15 13:57:05 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_upload_my_file[用例名称：Header中传错Content-Type]): 
+WARNING  2026-01-15 13:57:05 [pytest_result_log:128] pytest_runtest_teardown : End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_upload_my_file[用例名称：Header中传错Content-Type]
+WARNING  2026-01-15 13:57:05 [pytest_result_log:122] pytest_runtest_setup : Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_upload_my_file[用例名称：上传超过5M的图片失败]
+DEBUG    2026-01-15 13:57:06 [urllib3.connectionpool:544] _make_request : https://bahuyun.com:443 "POST /bd-api/file/upload_org_my_file?org_id=1463069991974207488 HTTP/1.1" 200 None
+INFO     2026-01-15 13:57:06 [pytest_result_log:190] pytest_result_log : test status is PASSED (tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_upload_my_file[用例名称：上传超过5M的图片失败]): 
+WARNING  2026-01-15 13:57:06 [pytest_result_log:128] pytest_runtest_teardown : End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_upload_my_file[用例名称：上传超过5M的图片失败]
