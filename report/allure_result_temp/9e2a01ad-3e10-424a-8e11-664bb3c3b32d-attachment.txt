@@ -1,0 +1,3 @@
+[33mWARNING [0m pytest_result_log:plugin.py:122 Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_upload_my_file[用例名称：Header中传错Content-Type]
+[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:544 https://bahuyun.com:443 "POST /bd-api/file/upload_org_my_file?org_id=1463069991974207488 HTTP/1.1" 200 None
+[33mWARNING [0m pytest_result_log:plugin.py:128 End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_upload_my_file[用例名称：Header中传错Content-Type]

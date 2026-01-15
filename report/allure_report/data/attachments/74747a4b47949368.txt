@@ -1,0 +1,3 @@
+[33mWARNING [0m pytest_result_log:plugin.py:122 Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_create_contact[用例名称：添加我的联系人]
+[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:544 https://bahuyun.com:443 "POST /bd-api/contact/create HTTP/1.1" 200 None
+[33mWARNING [0m pytest_result_log:plugin.py:128 End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_create_contact[用例名称：添加我的联系人]

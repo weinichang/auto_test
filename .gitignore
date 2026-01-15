@@ -48,8 +48,6 @@ nosetests.xml
 coverage.xml
 *.cover
 .pytest_cache/
-allure_result_temp/
-allure_report/
 
 # 日志文件
 logs/

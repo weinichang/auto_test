@@ -1,0 +1,3 @@
+[33mWARNING [0m pytest_result_log:plugin.py:122 Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_contact_list[用例名称：检查新创建的联系人]
+[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:544 https://bahuyun.com:443 "GET /bd-api/contact/list_self?search=&tag=&page=1 HTTP/1.1" 200 None
+[33mWARNING [0m pytest_result_log:plugin.py:128 End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_contact_list[用例名称：检查新创建的联系人]

@@ -1,0 +1,3 @@
+[33mWARNING [0m pytest_result_log:plugin.py:122 Start: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_my_file[用例名称：检查我的素材数据]
+[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:544 https://bahuyun.com:443 "GET /bd-api/file/list_org_my_file?org_id=1463069991974207488&expand=tags&page=1&size_range=0-100000000000 HTTP/1.1" 200 None
+[33mWARNING [0m pytest_result_log:plugin.py:128 End: tests/test_api/test_bahuyun_api.py::Test_Bahuyun::test_my_file[用例名称：检查我的素材数据]
