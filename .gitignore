@@ -49,10 +49,12 @@ coverage.xml
 *.cover
 .pytest_cache/
 
-# 日志文件
+# 日志/报告文件
 logs/
 *.log
 *.log.*
+report/
+allure*/
 
 
 # ========== PyCharm/IDE相关 ==========
